@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:tiktok/app/routes/app_pages.dart';
 import 'package:tiktok/app/utils/colors.dart';
 import 'package:tiktok/app/widgets/auth_button.dart';
 import 'package:tiktok/app/widgets/auth_text_field.dart';
@@ -84,6 +85,29 @@ class LoginView extends GetView<LoginController> {
                       },
                     ),
             ),
+            // if there is no account then go to signup
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Don\'t have an account? ',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () => Get.toNamed(Routes.SIGNUP),
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: AppColors.buttonColor,
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
