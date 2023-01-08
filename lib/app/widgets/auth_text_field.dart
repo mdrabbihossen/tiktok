@@ -11,7 +11,8 @@ class AuthTextField extends StatefulWidget {
   final VoidCallback? showPasswordPressed;
   final String errorText;
   final TextCapitalization capitalization;
-final IconData prefixIcon;
+  final IconData prefixIcon;
+
   const AuthTextField({
     Key? key,
     required this.controller,
@@ -36,7 +37,6 @@ class _AuthTextFieldState extends State<AuthTextField> {
       controller: widget.controller,
       obscureText: widget.isPassword ? !widget.showPassword : false,
       keyboardType: widget.inputType,
-      textAlign: TextAlign.center,
       textCapitalization: widget.capitalization,
       validator: (value) {
         if (value == null || value.isEmpty) {
@@ -59,7 +59,7 @@ class _AuthTextFieldState extends State<AuthTextField> {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5),
           borderSide: BorderSide(
-            color:  AppColors.borderColor,
+            color: AppColors.borderColor,
           ),
         ),
       ),

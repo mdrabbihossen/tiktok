@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:tiktok/app/utils/colors.dart';
+import 'package:tiktok/app/widgets/auth_button.dart';
+import 'package:tiktok/app/widgets/auth_text_field.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -32,13 +34,59 @@ class LoginView extends GetView<LoginController> {
               ),
             ),
             SizedBox(height: 25),
-            Container(
-              width: size.width,
-              margin: EdgeInsets.symmetric(horizontal: 20),
-            )
+            Form(
+              key: controller.formKey,
+              child: Column(
+                children: [
+                  Container(
+                    width: size.width,
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    child: AuthTextField(
+                      controller: controller.emailController,
+                      labelText: "Email",
+                      prefixIcon: Icons.email_rounded,
+                      errorText: "Username/Email required",
+                      capitalization: TextCapitalization.none,
+                      inputType: TextInputType.name,
+                    ),
+                  ),
+                  SizedBox(height: 25),
+                  Obx(
+                    () => Container(
+                      width: size.width,
+                      margin: EdgeInsets.symmetric(horizontal: 20),
+                      child: AuthTextField(
+                        controller: controller.passwordController,
+                        labelText: "Password",
+                        prefixIcon: Icons.lock_outline_rounded,
+                        isPassword: true,
+                        capitalization: TextCapitalization.none,
+                        errorText: "Password required",
+                        showPassword: controller.showPassword.value,
+                        showPasswordPressed: () {
+                          controller.onVisibilityChange();
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
+            Obx(
+              () => controller.showLoading.value
+                  ? CircularProgressIndicator()
+                  : AuthButton(
+                      size: size,
+                      authText: "Login",
+                      onPress: () {
+                        if (controller.formKey.currentState!.validate()) {}
+                      },
+                    ),
+            ),
           ],
         ),
-      )
+      ),
     );
   }
 }
