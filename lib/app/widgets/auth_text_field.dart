@@ -62,6 +62,17 @@ class _AuthTextFieldState extends State<AuthTextField> {
             color: AppColors.borderColor,
           ),
         ),
+        suffixIcon: (widget.isPassword)
+            ? IconButton(
+                onPressed: widget.showPasswordPressed,
+                icon: Icon(
+                  (!widget.showPassword)
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
+                ),
+                iconSize: 30,
+              )
+            : null,
       ),
     );
   }
