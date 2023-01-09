@@ -13,13 +13,13 @@ class User {
     required this.profilePhoto,
   });
 
-  static User fromSnap(DocumentSnapshot snapshot) {
-    var _snapshot = snapshot.data() as Map<String, dynamic>;
+  static User fromSnap(DocumentSnapshot snap) {
+    Map<String, dynamic> snapshot = snap.data() as Map<String, dynamic>;
     return User(
-      name: _snapshot['name'],
-      email: _snapshot['email'],
-      profilePhoto: _snapshot['profilePhoto'],
-      uid: _snapshot['uid'],
+      name: snapshot['name'],
+      email: snapshot['email'],
+      profilePhoto: snapshot['profilePhoto'],
+      uid: snapshot['uid'],
     );
   }
 
