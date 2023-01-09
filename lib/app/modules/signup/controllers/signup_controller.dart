@@ -34,8 +34,7 @@ class SignupController extends GetxController {
           email: emailController.text,
           password: passwordController.text,
         );
-        String _downloadUrl = await _uploadToStorage(profilePhoto.value);
-
+        String downloadUrl = await _uploadToStorage(profilePhoto.value);
       }
     } catch (e) {
       Get.snackbar("Error Creating account", e.toString());
