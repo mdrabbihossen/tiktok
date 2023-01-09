@@ -5,6 +5,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok/app/utils/firebase.dart';
+import '../../../data/user_model.dart' as model;
 
 class SignupController extends GetxController {
   //TODO: Implement SignupController
@@ -35,6 +36,13 @@ class SignupController extends GetxController {
           password: passwordController.text,
         );
         String downloadUrl = await _uploadToStorage(profilePhoto.value);
+        model.User user = model.User(
+          name: usernameController.text,
+          email: emailController.text,
+          profilePhoto: downloadUrl,
+          uid: credential.user!.uid,
+        );
+
       }
     } catch (e) {
       Get.snackbar("Error Creating account", e.toString());
