@@ -91,7 +91,7 @@ class LoginView extends GetView<LoginController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Don\'t have an account? ',
+                  'Don\'t have an account?',
                   style: TextStyle(
                     fontSize: 20,
                   ),
