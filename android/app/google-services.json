@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "861859182026",
-    "project_id": "tiktok-bf41f",
-    "storage_bucket": "tiktok-bf41f.appspot.com"
+    "project_number": "622064242466",
+    "project_id": "likee-47c11",
+    "storage_bucket": "likee-47c11.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:861859182026:android:dbbec6f182bfefd0738b33",
+        "mobilesdk_app_id": "1:622064242466:android:433fb09d3115a216051f7b",
         "android_client_info": {
           "package_name": "mycompany.tiktok"
         }
       },
       "oauth_client": [
         {
-          "client_id": "861859182026-jc7q7tgbloruh4hsk9c1oejq362m3jd4.apps.googleusercontent.com",
+          "client_id": "622064242466-t7pb9r561qbcvcc5sf4d82dc57n9s4hm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDybC7s3Ub-dK-8TOX4-mvHAK92KGY8msQ"
+          "current_key": "AIzaSyCoTmCnkK6N07sgFMC650hKhmybCk9_8XU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "861859182026-jc7q7tgbloruh4hsk9c1oejq362m3jd4.apps.googleusercontent.com",
+              "client_id": "622064242466-t7pb9r561qbcvcc5sf4d82dc57n9s4hm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
