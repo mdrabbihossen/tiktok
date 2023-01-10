@@ -41,7 +41,8 @@ class SignupView extends GetView<SignupController> {
                   const CircleAvatar(
                     radius: 64,
                     backgroundImage: CachedNetworkImageProvider(
-                        'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'),
+                      'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png',
+                    ),
                     backgroundColor: Colors.black,
                   ),
                   Positioned(
