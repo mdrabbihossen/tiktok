@@ -1,19 +1,18 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok/app/modules/video/views/add_video_screen.dart';
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController
 
-  static const List<Widget> pages = [
+  static List<Widget> pages = [
     Center(
       child: Text('Home'),
     ),
     Center(
       child: Text('Search'),
     ),
-    Center(
-      child: Text('Add Video'),
-    ),
+    AddVideoScreen(),
     Center(
       child: Text('Message'),
     ),
