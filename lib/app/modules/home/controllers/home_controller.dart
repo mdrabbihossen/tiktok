@@ -26,10 +26,6 @@ class HomeController extends GetxController {
 
   changeSelectedIndex(int index) {
     selectedIndex.value = index;
-    changeSelectedPage(index);
-  }
-
-  changeSelectedPage(int index) {
     selectedPage.value = pages[index];
   }
 }
