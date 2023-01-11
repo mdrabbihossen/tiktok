@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:tiktok/app/modules/video/controllers/video_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok/app/utils/colors.dart';
-import 'package:tiktok/app/utils/show_dialog.dart';
+import 'package:tiktok/app/utils/dialogs.dart';
 
 class AddVideoScreen extends GetView<VideoController> {
   @override

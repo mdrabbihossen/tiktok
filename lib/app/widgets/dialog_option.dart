@@ -13,21 +13,19 @@ class DialogOption extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onClick,
-      child: Row(
-        children: [
-          Icon(optionsIcon),
-          Padding(
-            padding: EdgeInsets.all(7.0),
-            child: Text(
-              optionsText,
-              style: TextStyle(fontSize: 20),
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onClick,
+        child: Row(
+          children: [
+            Icon(optionsIcon),
+            Padding(
+              padding: EdgeInsets.all(7.0),
+              child: Text(
+                optionsText,
+                style: TextStyle(fontSize: 20),
+              ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
+          ],
+        ),
+      );
 }
