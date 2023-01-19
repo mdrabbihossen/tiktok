@@ -81,15 +81,15 @@ class LoginView extends GetView<LoginController> {
                       size: size,
                       authText: "Login",
                       onPress: () {
-                        if (controller.formKey.currentState!.validate()) {
-                          controller.onLoginUser();
-                          Get.snackbar(
-                            "Login Successful",
-                            "Welcome to Tiktok",
-                            backgroundColor: AppColors.buttonColor,
-                            snackPosition: SnackPosition.BOTTOM,
-                          );
-                        }
+                        // if (controller.formKey.currentState!.validate()) {
+                        //   controller.onLoginUser();
+                        //   Get.snackbar(
+                        //     "Login Successful",
+                        //     "Welcome to Tiktok",
+                        //     backgroundColor: AppColors.buttonColor,
+                        //     snackPosition: SnackPosition.BOTTOM,
+                        //   );
+                        // }
                       },
                     ),
             ),

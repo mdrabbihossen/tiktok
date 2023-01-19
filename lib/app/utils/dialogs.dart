@@ -4,7 +4,11 @@ import 'package:tiktok/app/widgets/dialog_option.dart';
 import 'package:get/get.dart';
 
 class AppDialogs {
-  static showOptionDialog(BuildContext context) => showCupertinoDialog(
+   showOptionDialog({
+    required BuildContext context,
+    required VoidCallback onPressed,
+  }) =>
+      showCupertinoDialog(
         context: context,
         builder: (context) => CupertinoAlertDialog(
           content: Column(
@@ -12,12 +16,12 @@ class AppDialogs {
               DialogOption(
                 optionsIcon: Icons.image,
                 optionsText: "Gallery",
-                onClick: () {},
+                onClick: onPressed,
               ),
               DialogOption(
                 optionsIcon: Icons.camera_alt,
                 optionsText: "Camera",
-                onClick: () {},
+                onClick: onPressed,
               ),
             ],
           ),
