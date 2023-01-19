@@ -12,11 +12,7 @@ class VideoController extends GetxController {
   // video player controller added video from file
   final Rx<VideoPlayerController> videoPlayerController =
       VideoPlayerController.file(File('')).obs;
-
   final RxBool isPlaying = false.obs;
-
-  // video player controller added video from camera
-
   final TextEditingController songController = TextEditingController();
   final TextEditingController captionController = TextEditingController();
 
@@ -50,6 +46,5 @@ class VideoController extends GetxController {
       videoPlayerController.value.play();
       isPlaying.value = true;
     }
-    // videoPlayerController.value.pause();
   }
 }
