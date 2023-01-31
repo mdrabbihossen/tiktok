@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tiktok/app/modules/video/controllers/upload_video_controller.dart';
+
 import 'package:tiktok/app/modules/video/controllers/video_controller.dart';
 import 'package:video_player/video_player.dart';
 import '../../../widgets/auth_text_field.dart';
@@ -10,7 +10,7 @@ class ConfirmVideoScreen extends GetView<VideoController> {
   @override
   Widget build(BuildContext context) {
     Get.lazyPut(() => VideoController());
-    Get.lazyPut(() => UploadVideoController());
+
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
@@ -79,7 +79,9 @@ class ConfirmVideoScreen extends GetView<VideoController> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.uploadVideo();
+                      },
                       style: ElevatedButton.styleFrom(
                         minimumSize: Size(double.infinity, size.height * 0.07),
                       ),
